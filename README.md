@@ -1,2 +1,2 @@
 # Control-a-2d-arm-using-reinforcement-learning
-pygame environment for 2d robotic arm
+Control a 2d robotic arm developed using Pygame via reinforcement learning.
