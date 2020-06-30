@@ -34,9 +34,11 @@ class Viewer():
         self.center = np.array([200, 200])
         self.height = 500
         self.width = 500 
-        # self.fps = 60      
+        self.fps = 60
+        
         self.screen = pygame.display.set_mode((self.width, self.height))
-        self.background = pygame.Surface((self.width, self.height))     
+        self.background = pygame.Surface((self.width, self.height))
+        
         self.goal = pygame.draw.rect(self.background, (0, 0, 255), pygame.Rect(200, 200, 20, 20))
         
         
@@ -55,7 +57,9 @@ class Viewer():
                 # Check for KEYDOWN event 
                 if event.type == pygame.QUIT:
                     pygame.quit()
-                    exit() 
+                    exit()
+             
+            
             self.screen.blit(self.background, (0, 0))
             self.goal = pygame.draw.rect(self.background, (0, 0, 255), pygame.Rect(self.goal_info['x'], self.goal_info['y'], 20, 20))
             pygame.display.flip()
