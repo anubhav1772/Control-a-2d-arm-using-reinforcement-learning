@@ -23,7 +23,9 @@ class Env(object):
         pass
 
     def render(self):
-        pass
+        if self.viewer is None:
+            self.viewer = Viewer(arm_info=2,goal_info={'x':240, 'y':250})
+        self.viewer.render()
     
 class Viewer():
     def __init__(self, arm_info, goal_info):
@@ -65,7 +67,7 @@ class Viewer():
         
 
 if __name__ == '__main__':
-#    env = Env()
-#    while True:
-#        env.render()
-     Viewer(arm_info=2,goal_info={'x':240, 'y':250}).render()
+   env = Env()
+   while True:
+       env.render()
+    #  Viewer(arm_info=2,goal_info={'x':240, 'y':250}).render()
